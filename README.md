@@ -28,6 +28,11 @@ Getting all people from the API:
 curl -i -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" -X GET http://localhost:8000/gigy/people
 ```
 
+Or with a given proxy like http://localhost:8888 use :
+```
+curl -i -H "Accept: application/json" -H "Authorization: Bearer $TOKEN" -X GET http://localhost:8000/gigy/people  -x http://localhost:8888
+```
+
 ## LICENSE
 
 The code is released under the Apache License 2.0. See LICENSE for details.
