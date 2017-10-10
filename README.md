@@ -14,6 +14,13 @@ mvn spring-boot:run
 curl -X POST --user 'gigy:secret' -d 'grant_type=password&username=peter@example.com&password=password' http://localhost:8000/gigy/oauth/token
 ```
 
+or 
+ where http://localhost:8888 is the given proxy
+```
+curl -X POST --user 'gigy:secret' -d 'grant_type=password' http://localhost:8000/gigy/oauth/token -x http://localhost:8888 -d username="peter@example.com" -d password="password"
+```
+
+
 ## Example commands
 
 Getting all people from the API:
